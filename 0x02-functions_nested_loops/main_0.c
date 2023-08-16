@@ -2,11 +2,11 @@
 
 int main(void)
 {
-    int n = 'a';  // Replace 'c' with the character you want to check
+    
     int r;
 
 
-r = _isalpha(n);
+r = print_sign(98);
 
     return 0;
 }
