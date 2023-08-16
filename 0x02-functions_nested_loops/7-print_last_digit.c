@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _abs - computes the absolute value of an integer
- * @n: the integer to compute the absolute value for
- * Return: the absolute value of n
+ * print_last_digit - prints the last digit of a number
+ * @n: the number to extract the last digit from
+ * Return: the last digit of n
  */
 int print_last_digit(int n)
 {
