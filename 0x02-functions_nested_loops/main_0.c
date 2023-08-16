@@ -18,7 +18,7 @@ r = _islower('H');
     r = _islower(108);
 		
     _putchar(r + '0');
-		
+jack_bauer(); 		
     _putchar('\n');
 r = print_last_digit(98);
     return 0;
