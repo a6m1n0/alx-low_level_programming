@@ -1,5 +1,3 @@
-#include <ctype.h>  // Include the appropriate header for _isalpha
-
 #include "main.h"
 
 /**
@@ -9,5 +7,5 @@
  */
 int _isalpha(int c)
 {
-    return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
