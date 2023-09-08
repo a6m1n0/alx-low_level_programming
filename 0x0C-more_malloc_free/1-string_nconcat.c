@@ -2,45 +2,44 @@
 #include "main.h"
 
 /**
- * *string_nconcat - concatenates n bytes of a string to another string
- * @dest: string to append to
- * @src: string to concatenate from
- * @n: number of bytes from src to concatenate to dest
+ * *string_nconcat - concatenates numBer bytes of a string to another string
+ * @s1: string to append to
+ * @s2: string to concatenate from
+ * @numBer: number of bytes from s2 to concatenate to s1
  *
  * Return: pointer to the resulting string
  */
-char *string_nconcat(char *dest, char *src, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int numBer)
 {
-    char *result;
-    unsigned int index  = 0, j_l = 0, len_dest = 0, len_src = 0;
+	char *strIng;
+	unsigned int inD = 0, j = 0, len1 = 0, len2 = 0;
 
-    while (dest && dest[len_dest])
-        len_dest++;
-    while (src && src[len_src])
-        len_src++;
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
+		len2++;
 
-    if (n < len_src)
-        result = malloc(sizeof(char) * (len_dest + n + 1));
-    else
-        result = malloc(sizeof(char) * (len_dest + len_src + 1));
+	if (numBer < len2)
+		strIng = malloc(sizeof(char) * (len1 + numBer + 1));
+	else
+		strIng = malloc(sizeof(char) * (len1 + len2 + 1));
 
-    if (!result)
-        return (NULL);
+	if (!strIng)
+		return (NULL);
 
-    while (index < len_dest)
-    {
-        result[index] = dest[index];
-        index++;
-    }
+	while (inD < len1)
+	{
+		strIng[inD] = s1[inD];
+		inD++;
+	}
 
-    while (n < len_src && index < (len_dest + n))
-        result[index++] = src[j_l++];
+	while (numBer < len2 && inD < (len1 + numBer))
+		strIng[inD++] = s2[j++];
 
-    while (n >= len_src && index < (len_dest + len_src))
-        result[index++] = src[j_l++];
+	while (numBer >= len2 && inD < (len1 + len2))
+		strIng[inD++] = s2[j++];
 
-    result[index] = '\0';
+	strIng[inD] = '\0';
 
-    return (result);
+	return (strIng);
 }
-
