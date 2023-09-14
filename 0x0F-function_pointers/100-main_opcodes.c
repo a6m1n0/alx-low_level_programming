@@ -10,12 +10,12 @@
  */
 int main(int argc, char *argv[])
 {
-	int bytes, inD;
+	int bytes, i;
 	char *arr;
 
 	if (argc != 2)
 	{
-		printf("Error\numBer");
+		printf("Error\n");
 		exit(1);
 	}
 
@@ -23,20 +23,20 @@ int main(int argc, char *argv[])
 
 	if (bytes < 0)
 	{
-		printf("Error\numBer");
+		printf("Error\n");
 		exit(2);
 	}
 
 	arr = (char *)main;
 
-	for (inD = 0; inD < bytes; inD++)
+	for (i = 0; i < bytes; i++)
 	{
-		if (inD == bytes - 1)
+		if (i == bytes - 1)
 		{
-			printf("%02hhx\numBer", arr[inD]);
+			printf("%02hhx\n", arr[i]);
 			break;
 		}
-		printf("%02hhx ", arr[inD]);
+		printf("%02hhx ", arr[i]);
 	}
 	return (0);
 }
