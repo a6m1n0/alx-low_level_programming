@@ -9,10 +9,10 @@ You can only use putchar three times in your code
 
 int main (){
 
-    for (char alpha = 'a'; alpha <= 'z'; alpha++)
+    for (int alpha = 'a'; alpha <= 'z'; alpha++)
         putchar(alpha);
 
-    for (char alpha = 'A'; alpha <= 'Z'; alpha++)
+    for (int alpha = 'A'; alpha <= 'Z'; alpha++)
         putchar(alpha);
     putchar('\n');   
     return 0;
